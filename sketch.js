@@ -1,21 +1,19 @@
-var a =prompt('Enter the first variable');
-var b =prompt('Enter the second variable');
+var canvas, backgroundImage;
+
+var questions;
+
+var question, contestant, quiz;
+
+
 function setup(){
-
-var b2 = createButton('Click here to swap');
-b2.mousePressed(swap);
-
+  canvas = createCanvas(850,400);
+  database = firebase.database();
+  quiz = new Quiz();
+  quiz.start();
 }
 
-function draw()
-{
 
+function draw(){
+  background("pink");
 
-}
-
-function swap(){
-[a ,b] = [b, a];
-
-console.log("this value of a after swaping:" ,+a);
-console.log("this value of b after swaping:" ,+b);
 }
